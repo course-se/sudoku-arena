@@ -6,12 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Mirror Github to Gitee
-      uses: ./.
+      uses: Yikun/hub-mirror-action@v0.10
       with:
         src: github/course-se
         dst: gitee/course-se
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
         account_type: org
+        static_list: 'sudoku-arena'
         force_update: true
         debug: true
