@@ -1,0 +1,17 @@
+on: push
+name: gitee-mirror
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mirror Github to Gitee
+      uses: ./.
+      with:
+        src: github/course-se
+        dst: gitee/course-se
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        account_type: org
+        force_update: true
+        debug: true
