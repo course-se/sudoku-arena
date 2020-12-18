@@ -1,0 +1,35 @@
+.numpad {
+  border: solid 2px #ccc;
+  padding: 8px;
+  .nums {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 8px;
+    // background: #fff;
+
+    // border-radius: 12px;
+
+    .num {
+      grid-row: 1 / 1;
+      // grid-column: 1 / 1;
+      position: relative;
+      background: #eee;
+      // border-radius: 50%;
+      text-align: center;
+      height: 8vw;
+      width: 8vw;
+      line-height: 8vw;
+    }
+  }
+
+  .control-btns {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
